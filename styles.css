@@ -1,0 +1,162 @@
+/* PADDING/MARGINS RESET: */
+  * { padding: 0; margin: 0; }
+  body { font-family: sans-serif; }
+
+/*  layout styles: */
+main {
+  height: 100%;
+  width: 75%;
+  margin: auto;
+  padding: 25px;
+}
+
+.site-header {
+  width: 100%;
+  padding-bottom: 25px;
+  font-size: 3rem;
+}
+
+section {
+  display: flex;
+  width: 100%;
+}
+
+/* legend styles: */
+.legend {
+  width: 300px;
+  padding: 20px;
+  background: pink;
+}
+
+.legend-header {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* movelist:  */
+.legend-table {
+  width: 275px;
+  list-style: none;
+}
+
+.legend-table > li {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+
+  font-size: 1rem;
+  line-height: 1.5;
+  background: white;
+}
+
+.legend-table > li:nth-child(even) {
+  background: lightgrey;
+}
+
+
+.before, .after {
+  display: inline-block;
+  height: 40px;
+  width: 50%;
+}
+
+.after {
+  text-align: center;
+}
+
+
+/* action box styles: */
+.action {
+  padding: 20px;
+  background: lightgrey;
+  width: 69%;
+}
+
+/* input: */
+.input {
+  height: 35%;
+  text-align: center;
+}
+
+.input > h1 {
+  padding-bottom: 20px;
+}
+
+.input > input {
+  width: 400px;
+  font-size: 1.5rem;
+}
+
+/* output: */
+.output {
+  text-align: center;
+}
+
+.combo-output {
+  width: 100%;
+  text-align: center;
+}
+
+/* MOVELIST STYLES: ====================== */
+
+.movelist {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  background: url(tekken_icons_small.png);
+  /*border: 1px solid black;*/
+}
+
+/* directionals: */
+.neutral {
+  background-position: 95px -58px;
+}
+
+.back {
+  background-position:  432px -52px;
+}
+
+.d-b {
+  background-position: -60px -56px;
+}
+
+.down {
+  background-position: -102px -58px;
+}
+
+.d-f {
+  background-position: -145px -58px;
+}
+
+.forward {
+  background-position: -185px -55px;
+}
+
+.u-f {
+  background-position: -226px -57px;
+}
+
+.up {
+  background-position: -267px -58px;
+}
+
+.u-b {
+  background-position: -309px -59px;
+}
+
+/* attacks: */
+.one {
+  background-position: -18px -6px;
+}
+
+.two {
+  background-position: -59px -6px;
+}
+
+.three {
+  background-position: -101px -6px;
+}
+
+.four {
+  background-position: -143px -6px;
+}
