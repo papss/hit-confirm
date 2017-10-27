@@ -16,4 +16,19 @@
 //
 // 3b. return an error if the given input is invalid.
 
-// 4. render the new combo on the screen. 
+// 4. render the new combo on the screen.
+
+
+// jQuery for manipulating the DOM (step 4)
+$(document).ready(function() {
+  $('#converter').on( "click", function() {
+    getInput();
+    console.log("you clicked the button");
+  });
+});
+
+function getInput() {
+  // gets the input from target element (step 1): 
+  var input = document.getElementById('raw_input').value;
+  console.log(input);
+}
