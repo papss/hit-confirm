@@ -21,14 +21,22 @@
 
 // jQuery for manipulating the DOM (step 4)
 $(document).ready(function() {
+
   $('#converter').on( "click", function() {
-    getInput();
+    // gets the input from target element (step 1):
+    var input = document.getElementById('raw_input').value;
+    var output = hitConfirm(input);
     console.log("you clicked the button");
   });
-});
 
-function getInput() {
-  // gets the input from target element (step 1): 
-  var input = document.getElementById('raw_input').value;
-  console.log(input);
-}
+  function hitConfirm(input) {
+    console.log("yes this is working");
+    $('.combo-output').append(input);
+  }
+
+  // clears the content of output div:
+  $('#clear').on("click", function() {
+    $('.combo-output').empty();
+  });
+
+});
