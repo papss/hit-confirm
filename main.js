@@ -18,25 +18,25 @@
 
 // 4. render the new combo on the screen.
 
-
-// jQuery for manipulating the DOM (step 4)
 $(document).ready(function() {
 
   $('#converter').on( "click", function() {
+
+    console.log("you clicked the button");
+    // clears the output div:
+    $('.combo-output').empty();
     // gets the input from target element (step 1):
     var input = document.getElementById('raw_input').value;
+    // converts the input string:
     var output = hitConfirm(input);
-    console.log("you clicked the button");
+
   });
 
   function hitConfirm(input) {
-    console.log("yes this is working");
-    $('.combo-output').append(input);
+    // split the string into an array of substrings:
+    var output = input.split(' ');
+    console.log(output);
+    $('.combo-output').append(output);
   }
-
-  // clears the content of output div:
-  $('#clear').on("click", function() {
-    $('.combo-output').empty();
-  });
 
 });
