@@ -34,9 +34,13 @@ $(document).ready(function() {
 
   function hitConfirm(input) {
     // split the string into an array of substrings:
-    var output = input.split(' ');
-    console.log(output);
-    $('.combo-output').append(output);
+    var inputArray = input.split(' ');
+    var output = inputArray.forEach(function())
+
+    console.log(inputArray);
+
+    $('.combo-output').append(inputArray);
+
   }
 
 });
