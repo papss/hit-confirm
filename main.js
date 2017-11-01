@@ -35,11 +35,22 @@ $(document).ready(function() {
   function hitConfirm(input) {
     // split the string into an array of substrings:
     var inputArray = input.split(' ');
-    var output = inputArray.forEach(function())
+    // loop over each substring (item):
+    var output = inputArray.forEach(function(item) {
+
+      switch (item) {
+        case "f":
+          console.log("forward");
+          $('.combo-output').append("<i class='movelist forward'></i>");
+          break;
+        default:
+          console.log("that is not a valid input");
+          $('.combo-output').append(item);
+      };
+
+    });
 
     console.log(inputArray);
-
-    $('.combo-output').append(inputArray);
 
   }
 
