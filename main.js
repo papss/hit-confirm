@@ -18,103 +18,27 @@ $(document).ready(function() {
     // loop over each substring (item):
     var output = inputArray.forEach(function(item) {
 
-      // regExp goes here?
-      // use replace method to take raw substrings and translate them into
-      // something our switch method can read?
-      // ie. take "d+1" and turn it into "d + 1", but leave "1+2" alone?
+      // for each item in the array (substring) we need to check for characters
+      // and character patterns which can be replaced by a move icon. From there
+      // we can further break down the substring into a smaller array upon which
+      // we run our switch method.
 
-        switch (item) {
+      // Our regExp requirements:
 
-          // if neutral:
-          case "N":
-            console.log("neutral");
-            $('.combo-output').append("<i class='movelist neutral'></i>");
-            break;
+      // Needs to recognize the difference between a direction + a button, and a
+      // button + another button; ie. "d+1" vs "1+2", or "d+1+2".
+      // "d+1" needs to become "d + 1"; "1+2" can stay as is.
 
-          // if forward:
-          case "f":
-            console.log("forward");
-            $('.combo-output').append("<i class='movelist forward'></i>");
-            break;
+      // Needs to seperate inputs connected by a ",";
+      // ie: "f+3,1" becomes "f + 3 , 1".
 
-          // if back:
-          case "b":
-            console.log("back");
-            $('.combo-output').append("<i class='movelist back'></i>");
-            break;
+      // Needs to seperate inputs connected by a "~"; ie: "1~2" becomes "1 ~ 2".
 
-          // if up:
-          case "u":
-            console.log("up");
-            $('.combo-output').append("<i class='movelist up'></i>");
-            break;
+      // Needs to deal with diagonals by either adding or removing the "/"; ie:
+      // "d/f" becomes "df", or vice versa.
 
-          // if down:
-          case "d":
-            console.log("down");
-            $('.combo-output').append("<i class='movelist down'></i>");
-            break;
-
-          // if up/forward:
-          case "u/f":
-            console.log("up/forward");
-            $('.combo-output').append("<i class='movelist u-f'></i>");
-            break;
-
-          // if up/back:
-          case "u/b":
-            console.log("up/back");
-            $('.combo-output').append("<i class='movelist u-b'></i>");
-            break;
-
-          // if down/forward:
-          case "d/f":
-            console.log("down/forward");
-            $('.combo-output').append("<i class='movelist d-f'></i>");
-            break;
-
-          // if down/back:
-          case "d/b":
-            console.log("down/back");
-            $('.combo-output').append("<i class='movelist d-b'></i>");
-            break;
-
-          // if 1 (left punch):
-          case "1":
-            console.log("1 (left punch)");
-            $('.combo-output').append("<i class='movelist one'></i>");
-            break;
-
-          // if 2 (right punch):
-          case "2":
-            console.log("2 (right punch)");
-            $('.combo-output').append("<i class='movelist two'></i>");
-            break;
-
-          // if 3 (left kick):
-          case "3":
-            console.log("3 (left kick)");
-            $('.combo-output').append("<i class='movelist three'></i>");
-            break;
-
-          // if 4 (right kick):
-          case "4":
-            console.log("4 (right kick)");
-            $('.combo-output').append("<i class='movelist four'></i>");
-            break;
-
-          // no log message on space:
-          case " ":
-            break;
-
-          // else (unrecognized/unstyled input):
-          default:
-            console.log("unrecognized");
-            $('.combo-output').append(item);
-
-        };
-
-      // };  
+      // Needs to leave unrecognized characters alone; shouldn't be too difficult
+      // considering we know what the first character of every recognized input is. 
 
     });
 
