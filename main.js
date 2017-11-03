@@ -38,7 +38,7 @@ $(document).ready(function() {
       // "d/f" becomes "df", or vice versa.
 
       // Needs to leave unrecognized characters alone; shouldn't be too difficult
-      // considering we know what the first character of every recognized input is. 
+      // considering we know what the first character of every recognized input is.
 
     });
 
