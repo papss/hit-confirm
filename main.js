@@ -15,34 +15,123 @@ $(document).ready(function() {
   function hitConfirm(input) {
     // split the string into an array of substrings:
     var inputArray = input.split(' ');
+    console.log(inputArray);
     // loop over each substring (item):
     var output = inputArray.forEach(function(item) {
 
-      // for each item in the array (substring) we need to check for characters
-      // and character patterns which can be replaced by a move icon. From there
-      // we can further break down the substring into a smaller array upon which
-      // we run our switch method.
+      // ie. "uf3" becomes "uf 3"
+      var separateNumbers =   item.replace(/([udbf]|[UDBF])(?=[1-4])/g, "$1 ")
+      // only separate the first "+" in string, instead of globally, as it leaves
+      // the "1+2" in "d+1+2" intact.
+      var separatePlus =      separateNumbers.replace(/\+/, ' + ' );
+      var separateTilde =     separatePlus.replace(/\~/g, ' ~ ');
+      var separateOr =        separateTilde.replace(/\_/g, ' or ');
+      var separateComma =     separateOr.replace(/\,/g, ' , ');
 
-      // Our regExp requirements:
+      var finalInput = separateComma.split(' ');
 
-      // Needs to recognize the difference between a direction + a button, and a
-      // button + another button; ie. "d+1" vs "1+2", or "d+1+2".
-      // "d+1" needs to become "d + 1"; "1+2" can stay as is.
+      console.log(finalInput);
 
-      // Needs to seperate inputs connected by a ",";
-      // ie: "f+3,1" becomes "f + 3 , 1".
+      finalInput.forEach(function(item) {
 
-      // Needs to seperate inputs connected by a "~"; ie: "1~2" becomes "1 ~ 2".
+        switch (item) {
 
-      // Needs to deal with diagonals by either adding or removing the "/"; ie:
-      // "d/f" becomes "df", or vice versa.
+          // if neutral:
+          case "N":
+            console.log("neutral");
+            $('.combo-output').append("<i class='movelist neutral'></i>");
+            break;
 
-      // Needs to leave unrecognized characters alone; shouldn't be too difficult
-      // considering we know what the first character of every recognized input is.
+          // if forward:
+          case "f":
+            console.log("forward");
+            $('.combo-output').append("<i class='movelist forward'></i>");
+            break;
+
+          // if back:
+          case "b":
+            console.log("back");
+            $('.combo-output').append("<i class='movelist back'></i>");
+            break;
+
+          // if up:
+          case "u":
+            console.log("up");
+            $('.combo-output').append("<i class='movelist up'></i>");
+            break;
+
+          // if down:
+          case "d":
+            console.log("down");
+            $('.combo-output').append("<i class='movelist down'></i>");
+            break;
+
+          // if up/forward:
+          case "u/f":
+          case "uf":
+            console.log("up/forward");
+            $('.combo-output').append("<i class='movelist u-f'></i>");
+            break;
+
+          // if up/back:
+          case "u/b":
+          case "ub":
+            console.log("up/back");
+            $('.combo-output').append("<i class='movelist u-b'></i>");
+            break;
+
+          // if down/forward:
+          case "d/f":
+          case "df":
+            console.log("down/forward");
+            $('.combo-output').append("<i class='movelist d-f'></i>");
+            break;
+
+          // if down/back:
+          case "d/b":
+          case "db":
+            console.log("down/back");
+            $('.combo-output').append("<i class='movelist d-b'></i>");
+            break;
+
+          // if 1 (left punch):
+          case "1":
+            console.log("1 (left punch)");
+            $('.combo-output').append("<i class='movelist one'></i>");
+            break;
+
+          // if 2 (right punch):
+          case "2":
+            console.log("2 (right punch)");
+            $('.combo-output').append("<i class='movelist two'></i>");
+            break;
+
+          // if 3 (left kick):
+          case "3":
+            console.log("3 (left kick)");
+            $('.combo-output').append("<i class='movelist three'></i>");
+            break;
+
+          // if 4 (right kick):
+          case "4":
+            console.log("4 (right kick)");
+            $('.combo-output').append("<i class='movelist four'></i>");
+            break;
+
+          // no log message on space:
+          case " ":
+            break;
+
+          // else (unrecognized/unstyled input):
+          default:
+            console.log("unrecognized " + item);
+            $('.combo-output').append(item + " ");
+
+        };
+
+      });
 
     });
-
-    console.log(inputArray);
 
   }
 
