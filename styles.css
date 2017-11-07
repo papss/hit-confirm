@@ -5,7 +5,7 @@
 /*  layout styles: */
 main {
   height: 100%;
-  width: 75%;
+  width: 90%;
   margin: auto;
   padding: 25px;
 }
@@ -23,7 +23,7 @@ section {
 
 /* legend styles: */
 .legend {
-  width: 300px;
+  width: 200px;
   padding: 20px;
   background: pink;
 }
@@ -35,14 +35,14 @@ section {
 
 /* movelist:  */
 .legend-table {
-  width: 275px;
+  width: 175px;
   list-style: none;
 }
 
 .legend-table > li {
   display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
 
   font-size: 1rem;
   line-height: 1.5;
@@ -57,10 +57,11 @@ section {
 .before, .after {
   display: inline-block;
   height: 40px;
-  width: 50%;
+  width: 125px;
 }
 
 .after {
+  width: 25%;
   text-align: center;
 }
 
@@ -69,7 +70,7 @@ section {
 .action {
   padding: 20px;
   background: lightgrey;
-  width: 69%;
+  width: 80%;
 }
 
 /* input: */
@@ -109,9 +110,9 @@ section {
   display: inline-block;
   height: 36px;
   width: 36px;
-  margin: 0px 2.5px; 
+  margin: 0px 2.5px;
   background: url(tekken_icons_small.png);
-  /*border: 1px solid black;*/
+  border: 1px solid black;
 }
 
 /* directionals: */
@@ -151,6 +152,40 @@ section {
   background-position: -309px -59px;
 }
 
+/* held: */
+
+.hold-back {
+  background-position: 432px -100px;
+}
+
+.hold-db {
+  background-position: -55px -104px;
+}
+
+.hold-down {
+  background-position: -102px -105px;
+}
+
+.hold-df {
+  background-position: -145px -104px;
+}
+
+.hold-forward {
+  background-position: -185px -106px;
+}
+
+.hold-uf {
+  background-position: -226px -108px;
+}
+
+.hold-up {
+  background-position: -267px -107px;
+}
+
+.hold-ub {
+  background-position: -309px -108px;
+}
+
 /* attacks: */
 .one {
   background-position: -18px -6px;
@@ -166,4 +201,38 @@ section {
 
 .four {
   background-position: -143px -6px;
+}
+
+/* multi-button: */
+
+.one-two {
+  background-position: -226px -6px;
+}
+
+.one-three {
+  background-position: -184px -6px;
+}
+
+.one-four {
+  background-position: -354px -6px;
+}
+
+.two-three {
+  background-position: -310px -6px;
+}
+
+.two-four {
+  background-position: -396px -6px;
+}
+
+.three-four {
+  background-position: -269px -6px;
+}
+
+.one-two-three {
+  background-position: -355px -108px; 
+}
+
+.one-two-four {
+  background-position: -399px -106px;
 }
