@@ -20,13 +20,15 @@ $(document).ready(function() {
     var output = inputArray.forEach(function(item) {
 
       // ie. "uf3" becomes "uf 3"
-      var separateNumbers =   item.replace(/([udbf]|[UDBF])(?=[1-4])/g, "$1 ")
-      // only separate the first "+" in string, instead of globally, as it leaves
-      // the "1+2" in "d+1+2" intact.
-      var separatePlus =      separateNumbers.replace(/\+/, ' + ' );
-      var separateTilde =     separatePlus.replace(/\~/g, ' ~ ');
-      var separateOr =        separateTilde.replace(/\_/g, ' or ');
-      var separateComma =     separateOr.replace(/\,/g, ' , ');
+      var separateNumbers =     item.replace(/([udbf]|[UDBF])(?=[1-4])/g, "$1 ")
+      var separatePlus =        separateNumbers.replace(/([udbf]|[UDBF])\+/g, '$1 + ' );
+      var separateTilde =       separatePlus.replace(/\~/g, ' ~ ');
+      var separateOr =          separateTilde.replace(/\_/g, ' or ');
+      var sepOpenParenthesis =  separateOr.replace(/\(/g, ' ( ');
+      var sepCloseParenthesis = sepOpenParenthesis.replace(/\)/g, ' ) ');
+      var separateComma =       sepCloseParenthesis.replace(/\,/g, ' , ');
+
+      console.log(separateComma);
 
       var finalInput = separateComma.split(' ');
 
@@ -196,7 +198,7 @@ $(document).ready(function() {
           case "3+4":
             console.log("3 + 4");
             $('.combo-output').append("<i class='movelist three-four'></i>");
-            break; 
+            break;
 
           // no log message on space:
           case " ":
