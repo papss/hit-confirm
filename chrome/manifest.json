@@ -2,9 +2,12 @@
   "manifest_version": 2,
   "name": "Hit Confirm",
   "version": 0.5,
-
   "default_locale": "en",
-  "description": "Hit Confirm takes fighting combo notation and makes it easier for new players to read!",
+  "description": "Hit Confirm formats fighting game combos.",
+
+  "permissions": [
+    "contextMenus"
+  ],
 
   "background": {
     "scripts": ["./src/eventPage.js"],
