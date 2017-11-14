@@ -19,7 +19,7 @@ $(document).ready(function() {
     // loop over each substring (item):
     var output = inputArray.forEach(function(item) {
 
-      // ie. "uf3" becomes "uf 3"
+    // Future revision: figure out how to streamline this. 
       var separateNumbers =     item.replace(/([udbf]|[UDBF])(?=[1-4])/g, "$1 ")
       var separatePlus =        separateNumbers.replace(/([udbf]|[UDBF])\+/g, '$1 + ' );
       var separateTilde =       separatePlus.replace(/\~/g, ' ~ ');

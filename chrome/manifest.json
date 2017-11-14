@@ -5,4 +5,9 @@
 
   "default_locale": "en",
   "description": "Hit Confirm takes fighting combo notation and makes it easier for new players to read!",
+
+  "background": {
+    "scripts": ["./src/eventPage.js"],
+    "persistent": false
+  }
 }
