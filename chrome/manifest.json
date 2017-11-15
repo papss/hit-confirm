@@ -1,16 +1,26 @@
 {
   "manifest_version": 2,
   "name": "Hit Confirm",
-  "version": 0.5,
-  "default_locale": "en",
+  "version": "0.5",
   "description": "Hit Confirm formats fighting game combos.",
+
+  "icons": {
+    "16": "placeholder_icon.png",
+    "48": "placeholder_icon.png",
+   "128": "placeholder_icon.png"
+  },
+
+  "browser_action": {
+    "default_icon": "placeholder_icon.png",
+    "default_popup": "./src/html/popup.html"
+  },
 
   "permissions": [
     "contextMenus"
   ],
 
   "background": {
-    "scripts": ["./src/eventPage.js"],
+    "scripts": ["./src/javascript/eventPage.js"],
     "persistent": false
   }
 }
