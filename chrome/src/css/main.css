@@ -44,6 +44,47 @@
     background-color: purple;
   }
 
+  .hc-input-container {
+    height: 130px;
+    padding-top: 20px;
+    width: 100%;
+    background-color: lightgrey;
+  }
+
+  .hc-input {
+    display: block;
+    margin: auto;
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .hc-btn {
+    padding: 5px;
+    display: block;
+    margin: 20px auto;
+    font-size: 1rem;
+  }
+
+  .hc-output-container {
+    padding: 10px;
+    height: 130px;
+    width: 100%;
+    background-color: darkgrey;
+  }
+
+  .hc-output {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+    background: lightgrey;
+  }
+
+  .hc-output-tools {
+    height: 150px;
+    width: 100%;
+    background-color: lightgrey;
+  }
 /* LEGEND TAB: */
   .hc-legend {
     display: none;
