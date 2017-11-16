@@ -38,6 +38,7 @@
 
 /* HIT CONFIRM TAB: */
   .hc-main {
+    display: none;
     height: 100%;
     width: 100%;
     background-color: purple;
@@ -57,4 +58,9 @@
     height: 100%;
     width: 100%;
     background-color: cyan;
+  }
+
+/* ACTIVE ELEMENTS: */
+  .active-section {
+    display: block;
   }
