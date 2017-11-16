@@ -1,17 +1,4 @@
-// var contextMenuItem = {
-//   "id": "hitConfirm",
-//   "title": "Hit Confirm",
-//   "contexts": ["selection"],
-// };
-//
-// chrome.contextMenus.create(contextMenuItem);
-//
-// chrome.contextMenus.onCLicked.addListener(function(clickedItem) {
-//   if (clickedItem.menuItemId == "hitConfirm" && clickedItem.selectionText) {
-//     console.log(clickedItem.selectionText);
-//   };
-// });
-
+// Creates the context menu item:
 chrome.runtime.onInstalled.addListener(function() {
   chrome.contextMenus.create({
     "title": "HitConfirm",
@@ -20,7 +7,8 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
+// Handles context menu click event; passes selection into function: 
 chrome.contextMenus.onClicked.addListener(function(clickedItem) {
   var test = clickedItem.selectionText;
-  window.alert(test); 
+  window.alert(test);
 })
