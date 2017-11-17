@@ -90,8 +90,40 @@
     display: none;
     height: 100%;
     width: 100%;
-    background-color: green;
+    background-color: pink;
   }
+
+  .legend-header {
+    height: 20px;
+    padding: 10px;
+    background: white;
+  }
+
+  .legend-title {
+    font-size: 1rem;
+  }
+
+  .legend-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 5px 10px;
+    margin: auto;
+    background: white;
+  }
+
+  .legend-table-left {
+    height: 100%;
+    width: 50%;
+    background-color: cyan; 
+  }
+
+  .legend-table-right {
+    height: 100%;
+    width: 50%;
+    background-color: lightgrey;
+  }
+
 
 /* OPTIONS TAB: */
   .hc-options {
