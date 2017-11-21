@@ -105,25 +105,44 @@
 
   .legend-container {
     display: flex;
-    height: 100%;
-    width: 100%;
+    height: 400px;
     padding: 5px 10px;
     margin: auto;
     background: white;
   }
 
   .legend-table-left {
-    height: 100%;
+    height: 395px;
     width: 50%;
-    background-color: cyan; 
+    background-color: cyan;
   }
 
   .legend-table-right {
-    height: 100%;
+    height: 395px;
     width: 50%;
     background-color: lightgrey;
   }
 
+  .legend-table {
+    width: 100%;
+    list-style: none;
+  }
+
+  .legend-table > li > span {
+    display: inline-block;
+  }
+
+  .legend-descr {
+    padding: 2.5px 0px;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    background: grey;
+  }
+
+  .hc-icon {
+    background-color: white; 
+  }
 
 /* OPTIONS TAB: */
   .hc-options {
@@ -137,3 +156,138 @@
   .active-section {
     display: block;
   }
+
+/* ===================================== */
+/* MOVELIST:  ========================== */
+/* ===================================== */
+
+.movelist {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  margin: 0px 2.5px;
+  background: url(../images/tekken_icons_small.png);
+  border: 1px solid black;
+}
+
+/* directionals: */
+.neutral {
+  background-position: 95px -58px;
+}
+
+.back {
+  background-position:  432px -52px;
+}
+
+.d-b {
+  background-position: -60px -56px;
+}
+
+.down {
+  background-position: -102px -58px;
+}
+
+.d-f {
+  background-position: -145px -58px;
+}
+
+.forward {
+  background-position: -185px -55px;
+}
+
+.u-f {
+  background-position: -226px -57px;
+}
+
+.up {
+  background-position: -267px -58px;
+}
+
+.u-b {
+  background-position: -309px -59px;
+}
+
+/* held: */
+
+.hold-back {
+  background-position: 432px -100px;
+}
+
+.hold-db {
+  background-position: -55px -104px;
+}
+
+.hold-down {
+  background-position: -102px -105px;
+}
+
+.hold-df {
+  background-position: -145px -104px;
+}
+
+.hold-forward {
+  background-position: -185px -106px;
+}
+
+.hold-uf {
+  background-position: -226px -108px;
+}
+
+.hold-up {
+  background-position: -267px -107px;
+}
+
+.hold-ub {
+  background-position: -309px -108px;
+}
+
+/* attacks: */
+.one {
+  background-position: -18px -6px;
+}
+
+.two {
+  background-position: -59px -6px;
+}
+
+.three {
+  background-position: -101px -6px;
+}
+
+.four {
+  background-position: -143px -6px;
+}
+
+/* multi-button: */
+
+.one-two {
+  background-position: -226px -6px;
+}
+
+.one-three {
+  background-position: -184px -6px;
+}
+
+.one-four {
+  background-position: -354px -6px;
+}
+
+.two-three {
+  background-position: -310px -6px;
+}
+
+.two-four {
+  background-position: -396px -6px;
+}
+
+.three-four {
+  background-position: -269px -6px;
+}
+
+.one-two-three {
+  background-position: -355px -108px;
+}
+
+.one-two-four {
+  background-position: -399px -106px;
+}
