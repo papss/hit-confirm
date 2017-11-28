@@ -141,7 +141,7 @@
   }
 
   .hc-icon {
-    background-color: white; 
+    background-color: white;
   }
 
 /* OPTIONS TAB: */
@@ -167,7 +167,7 @@
   width: 36px;
   margin: 0px 2.5px;
   background: url(../images/tekken_icons_small.png);
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 /* directionals: */

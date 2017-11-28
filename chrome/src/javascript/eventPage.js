@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
-// Handles context menu click event; passes selection into function: 
+// Handles context menu click event; passes selection into function:
 chrome.contextMenus.onClicked.addListener(function(clickedItem) {
   var test = clickedItem.selectionText;
   window.alert(test);
