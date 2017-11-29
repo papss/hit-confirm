@@ -8,7 +8,22 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 // Handles context menu click event; passes selection into function:
-chrome.contextMenus.onClicked.addListener(function(clickedItem) {
-  var test = clickedItem.selectionText;
-  window.alert(test);
-})
+
+// chrome.contextMenus.onClicked.addListener(function(clickedItem) {
+//   var test = clickedItem.selectionText;
+//   window.alert(test);
+// });
+
+function contextClicked(info, tab) {
+  if (info.menuItemId == "hitConfirmMenu") {
+    chrome.tabs.query({
+      active: true, currentWindow: true
+    }, function(tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, {
+        "action": "openPopUp"
+      });
+    });
+  }
+};
+
+chrome.contextMenus.onClicked.addListener(contextClicked);

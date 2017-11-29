@@ -19,9 +19,9 @@ $(document).ready(function() {
     // loop over each substring (item):
     var output = inputArray.forEach(function(item) {
 
-    // Future revision: figure out how to streamline this. 
-      var separateNumbers =     item.replace(/([udbf]|[UDBF])(?=[1-4])/g, "$1 ")
-      var separatePlus =        separateNumbers.replace(/([udbf]|[UDBF])\+/g, '$1 + ' );
+    // Future revision: figure out how to streamline this.
+      var separateNumbers =     item.replace(/([udbfn]|[UDBFN])(?=[1-4])/g, "$1 ")
+      var separatePlus =        separateNumbers.replace(/([udbfn]|[UDBFN])\+/g, '$1 + ' );
       var separateTilde =       separatePlus.replace(/\~/g, ' ~ ');
       var separateOr =          separateTilde.replace(/\_/g, ' or ');
       var sepOpenParenthesis =  separateOr.replace(/\(/g, ' ( ');
