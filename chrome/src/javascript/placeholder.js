@@ -3,6 +3,7 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if ( request.action == "openPopUp" ) {
 
+    // injects pop-up HTML into the page: 
     background = document.createElement('div');
     background.id = "hc-background";
     hcBox = document.createElement('main');

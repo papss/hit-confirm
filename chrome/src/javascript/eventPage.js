@@ -7,13 +7,7 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
-// Handles context menu click event; passes selection into function:
-
-// chrome.contextMenus.onClicked.addListener(function(clickedItem) {
-//   var test = clickedItem.selectionText;
-//   window.alert(test);
-// });
-
+// messages placeholder.js:
 function contextClicked(info, tab) {
   if (info.menuItemId == "hitConfirmMenu") {
     chrome.tabs.query({
@@ -27,3 +21,11 @@ function contextClicked(info, tab) {
 };
 
 chrome.contextMenus.onClicked.addListener(contextClicked);
+
+
+// old Click event listener: 
+
+// chrome.contextMenus.onClicked.addListener(function(clickedItem) {
+//   var test = clickedItem.selectionText;
+//   window.alert(test);
+// });
