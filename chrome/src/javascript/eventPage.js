@@ -1,3 +1,4 @@
+// this is a background script.
 // Creates the context menu item:
 chrome.runtime.onInstalled.addListener(function() {
   chrome.contextMenus.create({
@@ -11,7 +12,8 @@ chrome.runtime.onInstalled.addListener(function() {
 function contextClicked(info, tab) {
   if (info.menuItemId == "hitConfirmMenu") {
     chrome.tabs.query({
-      active: true, currentWindow: true
+      active: true,
+      currentWindow: true
     }, function(tabs) {
       chrome.tabs.sendMessage(tabs[0].id, {
         "action": "openPopUp"
@@ -22,8 +24,7 @@ function contextClicked(info, tab) {
 
 chrome.contextMenus.onClicked.addListener(contextClicked);
 
-
-// old Click event listener: 
+// old Click event listener:
 
 // chrome.contextMenus.onClicked.addListener(function(clickedItem) {
 //   var test = clickedItem.selectionText;
