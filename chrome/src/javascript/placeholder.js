@@ -1,10 +1,15 @@
 // this is a content script.
+
+$(document).ready(function() {
+
+});
+
 // placeholder code for creating extension lightbox:
 // listens for the openPopUp message to be sent
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if ( request.action == "openPopUp" ) {
 
-    // gets the selected text: 
+    // gets the selected text:
     input = window.getSelection().toString();
 
     // injects pop-up HTML into the page:
@@ -13,7 +18,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     hcBox = document.createElement('main');
     hcBox.id = "hc-test";
 
-    hcBox.innerHTML = input;
+    hcBox.innerHTML = "<h1>" + input + "</h1>";
 
     document.body.appendChild(background);
     background.appendChild(hcBox);
@@ -28,7 +33,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     button.textContent='Close';
     hcBox.appendChild(button);
     sendResponse({
-      farewell: "eff off"
+      farewell: "bye bye"
     });
 
   }

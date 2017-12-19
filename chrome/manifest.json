@@ -18,7 +18,10 @@
   "permissions": [
     "contextMenus",
     "<all_urls>",
-    "tabs" 
+    "tabs",
+    "activeTab",
+    "http://*/",
+    "https://*/"
   ],
 
   "background": {

@@ -8,6 +8,13 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
+// hopefully initializes jQuery:
+function injectJquery(tab) {
+  chrome.tabs.executeScript(null, {file: "jquery-3.2.1.min.js"}, function() {
+    chrome.tabs.executeScript(null, {file: "placeholder.js"});
+  });
+}
+
 // messages placeholder.js:
 function contextClicked(info, tab) {
   if (info.menuItemId == "hitConfirmMenu") {
@@ -22,6 +29,7 @@ function contextClicked(info, tab) {
   }
 };
 
+chrome.contextMenus.onClicked.addListener(injectJquery);
 chrome.contextMenus.onClicked.addListener(contextClicked);
 
 // old Click event listener:
