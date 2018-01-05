@@ -14,7 +14,22 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     hcBox = document.createElement('main');
     hcBox.id = "hc-test";
 
-    hcBox.innerHTML = "<h1>" + input + "</h1>";
+    hcBox.innerHTML =
+      `<div id='hc-header'>
+        <div id='hc-title'></div>
+        <div id='hc-exit'></div>
+      </div>
+      <div id='hc-input-container'>
+        <input type='text' value='` + input + `' id='hc-input'>
+        <button id='hc-btn'> Hit Confirm </button>
+      </div>
+      <div id='hc-output-container'>
+        <div id='hc-output'></div>
+      </div>
+      <div id='hc-footer'>
+        <div id='hc-footer-tab'></div>
+        <div id='hc-footer-tab'></div>
+      </div>`;
 
     document.body.appendChild(background);
     background.appendChild(hcBox);
