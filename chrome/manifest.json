@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Hit Confirm",
   "version": "0.5",
-  "description": "Hit Confirm formats fighting game combos.",
+  "description": "Hit Confirm formats fighting game combos to be more readable for new players.",
 
   "icons": {
     "16": "placeholder_icon.png",
@@ -17,11 +17,9 @@
 
   "permissions": [
     "contextMenus",
-    "<all_urls>",
     "tabs",
     "activeTab",
-    "http://*/",
-    "https://*/"
+    "<all_urls>"
   ],
 
   "background": {

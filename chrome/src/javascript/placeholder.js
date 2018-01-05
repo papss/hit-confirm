@@ -1,9 +1,5 @@
 // this is a content script.
 
-$(document).ready(function() {
-
-});
-
 // placeholder code for creating extension lightbox:
 // listens for the openPopUp message to be sent
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
