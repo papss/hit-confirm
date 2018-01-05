@@ -49,3 +49,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
   }
 });
+
+// runs hitConfirm method on button press:
+
+// hitConfirm method (re-written to remove jQuery): 
