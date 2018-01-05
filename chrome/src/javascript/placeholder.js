@@ -34,6 +34,21 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     document.body.appendChild(background);
     background.appendChild(hcBox);
 
+    // runs hitConfirm method on button press:
+    buttonPress = function() {
+      var div = document.getElementById('hc-input-container');
+      if (div.style.color == "lightgrey") {
+        div.style.color = "yellow";
+      } else {
+        div.style.color = "lightgrey";
+      }
+    }
+
+    // adds listener to button:
+    var hcButton = document.getElementById('hc-btn');
+    hcButton.onclick=buttonPress;
+
+    // Closes the Lightbox (duh):
     closeBox = function() {
       var hcBox = document.getElementById('hc-background');
       hcBox.parentNode.removeChild(hcBox);
@@ -46,10 +61,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     sendResponse({
       farewell: "bye bye"
     });
-
   }
 });
 
-// runs hitConfirm method on button press:
 
-// hitConfirm method (re-written to remove jQuery): 
+
+
+
+// hitConfirm method (re-written to remove jQuery):
