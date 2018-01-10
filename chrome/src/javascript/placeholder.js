@@ -34,6 +34,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     document.body.appendChild(background);
     background.appendChild(hcBox);
 
+    // displays the formatted output:
+    hitConfirm(input);
+
+    // we need to allow the user to edit the input in case of errors: 
+
     // adds listener to button:
     var hcButton = document.getElementById('hc-btn');
     hcButton.onclick = function(event) {

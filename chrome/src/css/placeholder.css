@@ -72,7 +72,7 @@
   height: 36px;
   width: 36px;
   margin: 0px 2.5px;
-  background: url(../images/tekken_icons_small.png);
+  background: url('chrome-extension://__MSG_@@extension_id__/src/images/tekken_icons_small.png');
   /*border: 1px solid black;*/
 }
 

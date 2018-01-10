@@ -34,5 +34,7 @@
       "css":        ["./src/css/placeholder.css"],
       "all_frames": false
     }
-  ]
+  ],
+
+  "web_accessible_resources": ["src/images/*.png"]
 }
