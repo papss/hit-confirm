@@ -35,18 +35,12 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     background.appendChild(hcBox);
 
     // runs hitConfirm method on button press:
-    buttonPress = function() {
-      var div = document.getElementById('hc-input-container');
-      if (div.style.color == "lightgrey") {
-        div.style.color = "yellow";
-      } else {
-        div.style.color = "lightgrey";
-      }
-    }
 
     // adds listener to button:
     var hcButton = document.getElementById('hc-btn');
-    hcButton.onclick=buttonPress;
+    hcButton.onclick = function(event) {
+      document.getElementById('hc-output').innerHTML = input; 
+    };
 
     // Closes the Lightbox (duh):
     closeBox = function() {
