@@ -37,12 +37,14 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     // displays the formatted output:
     hitConfirm(input);
 
-    // we need to allow the user to edit the input in case of errors: 
-
     // adds listener to button:
     var hcButton = document.getElementById('hc-btn');
+    var outputDiv = document.getElementById('hc-output');
+
     hcButton.onclick = function(event) {
-      hitConfirm(input);
+      outputDiv.innerHTML = "";
+      revisedInput = document.getElementById('hc-input').value;
+      hitConfirm(revisedInput);
     };
 
     // Closes the Lightbox (duh):
@@ -63,9 +65,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 
 // hitConfirm method (re-written to remove jQuery):
-function hitConfirm(input) {
+function hitConfirm(string) {
   // split the string into an array of substrings:
-  var inputArray = input.split(' ');
+  var inputArray = string.split(' ');
   console.log(inputArray);
   // loop over each substring (item):
   var output = inputArray.forEach(function(item) {
