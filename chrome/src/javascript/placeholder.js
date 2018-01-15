@@ -54,9 +54,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     }
 
     button = document.createElement('button');
+    button.id = "hc-exit-bttn";
     button.onclick=closeBox;
-    button.textContent='Close';
-    hcBox.appendChild(button);
+    button.textContent='X';
+    document.getElementById('hc-exit').appendChild(button);
     sendResponse({
       farewell: "bye bye"
     });
