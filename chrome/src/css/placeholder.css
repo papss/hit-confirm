@@ -16,36 +16,55 @@
   top: 50%;
   margin-top: -165px;
   width: 580px;
-  height: 335px;
-  background: white;
+  /* height: 335px; */
+
+  padding: 3px;
+  background: darksalmon;
   z-index: 1001;
 }
 
 #hc-header {
   width: 100%;
-  height: 10%;
+  height: 25px;
   display: flex;
   background: pink;
 }
 
+#hc-title {
+  display: inline-block;
+  width: 500px;
+  height: 100%;
+  background: yellow;
+}
+
+#hc-exit {
+  display: inline-block;
+  width: 80px;
+  height: 100%;
+  background: red;
+}
+
 #hc-input-container {
-  height: 130px;
-  padding-top: 20px;
+  height: 40px;
+  padding-top: 24px;
+  padding-bottom: 10px;
   width: 100%;
+
+  text-align: center;
   background-color: lightgrey;
 }
 
 #hc-input {
-  display: block;
+  display: inline-block;
   margin: auto;
-  width: 80%;
+  width: 400px;
   font-size: 1rem;
 }
 
 #hc-btn {
+  display: inline-block;
   padding: 5px;
-  display: block;
-  margin: 20px auto;
+  /* margin: 20px auto; */
   font-size: 1rem;
 }
 
