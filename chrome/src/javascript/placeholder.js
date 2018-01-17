@@ -16,7 +16,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
     hcBox.innerHTML =
       `<div id='hc-header'>
-        <div id='hc-title'></div>
+        <div id='hc-title'>
+          <h1> Hit Confirm </h1> 
+        </div>
         <div id='hc-exit'></div>
       </div>
       <div id='hc-input-container'>

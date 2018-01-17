@@ -34,6 +34,16 @@
   background: #046e8f;
 }
 
+#hc-title > h1 {
+  height: 100%;
+  width: 100%;
+  color: white;
+  border: none;
+  background: none;
+
+  font-family: sans-serif;
+}
+
 #hc-exit {
   display: inline-block;
   width: 50px;
@@ -65,7 +75,9 @@
   display: inline-block;
   margin: auto;
   width: 400px;
+
   font-size: 1.2rem;
+  font-family: sans-serif;
   color: white;
 
   border: none;
@@ -83,21 +95,31 @@
 
 /* lightbox bottom half: */
 #hc-output-container {
-  height: 130px;
+  min-height: 75px;
   width: 100%;
-  background-color: #022f40;
+  background-color: #183446;
   color: white;
 }
 
 #hc-output {
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  width: 97%;
   margin: auto;
+  background: #022f40;
+
   text-align: center;
+  font-family: sans-serif;
   font-size: 1rem;
-  /* background: pink; */
 }
 
 /* lightbox footer:  */
+
+#hc-footer {
+  height: 30px;
+  width: 100%;
+  background: #183446;
+}
 
 /* ===================================== */
 /* MOVELIST:  ========================== */
