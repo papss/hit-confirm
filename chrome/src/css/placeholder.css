@@ -62,6 +62,7 @@
 
 /* lightbox top half: */
 #hc-input-container {
+  box-sizing: content-box !important;
   height: 40px;
   padding-top: 24px;
   padding-bottom: 10px;
@@ -95,6 +96,7 @@
 
 /* lightbox bottom half: */
 #hc-output-container {
+  box-sizing: content-box !important;
   min-height: 75px;
   width: 100%;
   background-color: #183446;
