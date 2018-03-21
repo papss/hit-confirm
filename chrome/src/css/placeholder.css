@@ -20,21 +20,21 @@
 }
 
 /* lightbox header styles: */
-#hc-header {
+#hc-header-contain {
   width: 100%;
   height: 25px;
   display: flex;
   background: pink;
 }
 
-#hc-title {
+#hc-title-contain {
   display: inline-block;
   width: 530px;
   height: 100%;
   background: #046e8f;
 }
 
-#hc-title > h1 {
+#hc-title {
   height: 100%;
   width: 100%;
   color: white;
