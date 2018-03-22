@@ -29,8 +29,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         <div id='hc-output'></div>
       </div>
       <div id='hc-footer'>
-        <div id='hc-footer-tab'></div>
-        <div id='hc-footer-tab'></div>
+        <div id='hc-footer-tab'>
+          <button class="hc-save-button"> Save </button> 
+        </div>
+        <div id='hc-footer-tab'>
+        </div>
       </div>`;
 
     document.body.appendChild(background);

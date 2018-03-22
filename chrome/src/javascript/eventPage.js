@@ -1,4 +1,4 @@
-// this is a background script.
+// Hit Confirm background script.
 // Creates the context menu item:
 chrome.runtime.onInstalled.addListener(function() {
   chrome.contextMenus.create({
@@ -23,10 +23,3 @@ function contextClicked(info, tab) {
 };
 
 chrome.contextMenus.onClicked.addListener(contextClicked);
-
-// old Click event listener:
-
-// chrome.contextMenus.onClicked.addListener(function(clickedItem) {
-//   var test = clickedItem.selectionText;
-//   window.alert(test);
-// });

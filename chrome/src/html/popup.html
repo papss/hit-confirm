@@ -1,109 +1,24 @@
 <!DOCTYPE html>
+
 <html>
-
   <head>
-
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/popup.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-
     <script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../javascript/popup.js"></script>
-
     <title> Hit Confirm </title>
-
   </head>
 
   <body>
-
-    <main>
-
-      <header>
-
-        <div class="hc-header title">
-          <span> Hit Confirm </span>
-        </div>
-        <div class="hc-header header-legend">
-          <span> Legend </span>
-        </div>
-        <div class="hc-header header-options">
-          <span> Options </span>
-        </div>
-
+    <div class="hc-popup-container">
+      <header class="hc-popup-header">
+        <h1> Hit Confirm </h1>
       </header>
-
-      <div class="hc-container">
-
-        <section class="hc-main active-section">
-
-          <div class="hc-input-container">
-            <input type="text" class="hc-input" id="hc-input">
-            <button class="hc-btn"> Hit Confirm </button>
-          </div>
-
-          <div class="hc-output-container">
-            <div class="hc-output"></div>
-          </div>
-
-          <div class="hc-output-tools"></div>
-        </section>
-
-        <section class="hc-legend">
-
-          <header class="legend-header">
-            <span class="legend-title"> Tekken 7 Notations: </span>
-          </header>
-
-          <div class="legend-container">
-            <div class="legend-table-left">
-              <ul class="legend-table">
-
-                <li>
-                  <span class="legend-descr"> Directions: </span>
-                </li>
-
-                <li>
-                  <span class="key"> Neutral (N) </span>
-                  <span class="hc-icon">
-                    <i class="movelist neutral"></i>
-                  </span>
-                </li>
-
-                <li>
-                  <span class="key"> Up (u): </span>
-                  <span class="hc-icon">
-                    <i class="movelist up"></i>
-                  </span>
-                  <span class="key-held"> Held (U): </span>
-                  <span class="hc-icon">
-                    <i class="movelist hold-up"></i>
-                  </span>
-                </li>
-
-              </ul>
-            </div>
-
-            <div class="legend-table-right">
-              <ul class="legend-table">
-
-                <li>
-                  <span class="legend-descr"> Directions: </span>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-
-        </section>
-
-        <section class="hc-options">
-
-        </section>
-
+      <div class="hc-popup-body">
+        <a href="hitconfirm.html" target="_newtab"> Click </a>
       </div>
-
-    </main>
-
+    </div>
   </body>
 
 </html>
