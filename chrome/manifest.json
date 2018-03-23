@@ -31,11 +31,17 @@
   "content_scripts": [
     {
       "matches":    ["<all_urls>"],
-      "js":         ["./src/javascript/placeholder.js"],
+      "js":         [
+                      "./src/javascript/modal.js",
+                      "./src/javascript/combostorage.js"
+                    ],
       "css":        ["./src/css/placeholder.css"],
       "all_frames": false
     }
   ],
 
-  "web_accessible_resources": ["src/images/*.png"]
+  "web_accessible_resources": [
+    "src/images/*.png",
+    "src/html/*.html"
+  ]
 }

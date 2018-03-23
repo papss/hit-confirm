@@ -5,6 +5,9 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if ( request.action == "openPopUp" ) {
 
+    var optionsUrl = chrome.extension.getURL("./src/html/options.html");
+    var hcUrl = chrome.extension.getURL("./src/html/hitconfirm.html");
+
     // gets the selected text:
     input = window.getSelection().toString();
 
@@ -30,9 +33,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       </div>
       <div id='hc-footer'>
         <div id='hc-footer-tab'>
-          <button class="hc-save-button"> Save </button> 
+          <a href='` + hcUrl + `' target='_newtab' id='hc-save-btn'> Save this Combo </a>
         </div>
         <div id='hc-footer-tab'>
+          <a href='` + optionsUrl + `' target='_newtab'>Link to Main</a>
         </div>
       </div>`;
 
