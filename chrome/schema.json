@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+
+    "Combo": {
+      "type": "object",
+      "id": "ComboObject",
+      "properties": {
+        "input": { "type": "string" }
+      }
+    },
+
+    "Folder": {
+      "type": "array",
+      "properties": {
+        "title": { "type": "string" }
+      },
+      "items": { "$ref": "ComboObject" }
+    }
+
+  }
+}

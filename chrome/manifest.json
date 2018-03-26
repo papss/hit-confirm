@@ -40,6 +40,10 @@
     }
   ],
 
+  "storage": {
+    "managed_schema": "schema.json"
+  },
+
   "web_accessible_resources": [
     "src/images/*.png",
     "src/html/*.html"
