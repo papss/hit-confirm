@@ -82,7 +82,7 @@ section {
   font-size: 1.5rem;
 }
 
-#save-btn {
+#save-btn, #test-btn {
   font-size: 1  rem;
   padding: 5px;
 }
@@ -90,6 +90,6 @@ section {
 .placeholder-2 {
   width: 50%;
   height: 90%;
-  padding: 20px; 
+  padding: 20px;
   background: pink;
 }
