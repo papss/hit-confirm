@@ -8,7 +8,7 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
-// messages placeholder.js:
+// messages modal.js:
 function contextClicked(info, tab) {
   if (info.menuItemId == "hitConfirmMenu") {
     chrome.tabs.query({

@@ -56,7 +56,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       hitConfirm(revisedInput);
     };
 
-    // Closes the Lightbox (duh):
+    
+
+    // Closes the Lightbox:
     closeBox = function() {
       var hcBox = document.getElementById('hc-background');
       hcBox.parentNode.removeChild(hcBox);
@@ -72,7 +74,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     });
   }
 });
-
 
 // hitConfirm method (re-written to remove jQuery):
 function hitConfirm(string) {

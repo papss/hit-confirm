@@ -56,8 +56,40 @@ header > h1 {
 }
 
 section {
+  display: flex;
+  flex-wrap: wrap;
   width: 95%;
   margin: 20px auto;
   height: 400px;
   background: #f3f3f3;
+}
+
+.subheader {
+  width: 100%;
+  height: 10%;
+}
+
+.placeholder-1 {
+  width: 50%;
+  height: 90%;
+  padding: 20px;
+}
+
+#input-to-save {
+  display: block;
+  margin: 15px 0;
+  width: 400px;
+  font-size: 1.5rem;
+}
+
+#save-btn {
+  font-size: 1  rem;
+  padding: 5px;
+}
+
+.placeholder-2 {
+  width: 50%;
+  height: 90%;
+  padding: 20px; 
+  background: pink;
 }

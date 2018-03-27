@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <title> Hit Confirm </title>
-
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../javascript/hc-main.js"></script>
   </head>
   <body>
 
@@ -18,12 +19,32 @@
     </aside>
 
     <main class="hc-body">
+
       <header class="nav-header">
         <h1> Saved Combos </h1>
       </header>
+
       <section>
-        <header> My Folders </header>
+
+        <header class="subheader"> My Folders </header>
+
+        <div class="placeholder-1">
+
+          <h2> Save a Combo: </h2>
+
+          <form id="save-form" action="">
+            <input id="input-to-save" type="text" name="" value="">
+            <button id="save-btn" type="submit" name="button"> Save this Combo </button>
+          </form>
+
+        </div>
+
+        <div class="placeholder-2">
+          <h2> Saved Combos: </h2>
+        </div>
+
       </section>
+
       <section>
         <header> Combos </header>
       </section>
